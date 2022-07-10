@@ -3,8 +3,8 @@ on:
   - pull_request:
       types: [opened, reopened]
   - push:
-    branches:
-      - 'feature/**'
+      branches:
+        - 'feature/**'
   workflow_dispatch:
 jobs:
   unittest:
