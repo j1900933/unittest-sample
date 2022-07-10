@@ -1,9 +1,8 @@
 name: unittest sample
 on:
-  pull_request:
-    types: [opened, reopened]
+  push:
   branches:
-    - feature/*
+    - master
   workflow_dispatch:
 jobs:
   unittest:
