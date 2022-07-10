@@ -1,8 +1,8 @@
 name: unittest sample
 on:
-  push:
+  pull_request:
     branches:
-      - master
+      - feature/*
   workflow_dispatch:
 jobs:
   unittest:
