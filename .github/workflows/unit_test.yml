@@ -1,6 +1,7 @@
 name: unittest sample
 on:
   pull_request:
+    types: [opend, reopend]
     branches:
       - feature/*
   workflow_dispatch:
