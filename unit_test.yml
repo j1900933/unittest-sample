@@ -1,0 +1,21 @@
+name: unittest sample
+on:
+  pull_request:
+    types: [opened, reopened]
+  branches:
+    - feature/*
+  workflow_dispatch:
+jobs:
+  unittest
+    runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+        architecture: 'x64'
+    - name: get python version
+      run: python -V
+    - name: unittest for python
+      run: python -m unittest discover tests
